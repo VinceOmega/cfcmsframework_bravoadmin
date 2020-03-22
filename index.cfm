@@ -11,8 +11,8 @@
     private void function Init( required struct URL, required struct FORM ){
 
         //structs
-        var urlData     = application[ 'errorPanel' ][ 'components' ][ 'utility' ][ 'strings' ].Strings_TrimInput_TASK( URL );
-        var formData    = application[ 'errorPanel' ][ 'components' ][ 'utility' ][ 'strings' ].Strings_TrimInput_TASK( FORM );
+        var urlData     = APPLICATION[ 'adminPanel' ][ 'components' ][ 'utility' ][ 'strings' ].Strings_TrimInput_TASK( URL );
+        var formData    = APPLICATION[ 'adminPanel' ][ 'components' ][ 'utility' ][ 'strings' ].Strings_TrimInput_TASK( FORM );
 
         //strings
         var dir                 = ( structKeyExists( urlData, 'dir' ) && arrayFind( this.directories, urlData[ 'dir' ] ) )                          ? urlData[ 'dir' ]             : 'auth';
@@ -22,7 +22,7 @@
         var ajax                = ( structKeyExists( urlData, 'ajax'  ) && isBoolean( urlData[ 'ajax' ] ) && urlData.ajax )                         ? urlData[ 'ajax' ]            :  false;
         var ajax                = ( structKeyExists( formData, 'ajax'  ) && isBoolean( formData[ 'ajax' ] ) && formData.ajax )                      ? formData[ 'ajax' ]           :  ajax;
         var chromeless          = ( structKeyExists( urlData, 'chromeless'  ) && isBoolean( urlData[ 'chromeless' ] )  && urlData.chromeless )      ? urlData[ 'chromeless' ]      :  false;
-        var retrieveInvoke      = route & '_' & application.errorPanel.components.utility.strings.Strings_CleanPageSlug_TASK( page, 'file' ) & '_' & 'RETRIEVE';
+        var retrieveInvoke      = route & '_' & application.adminPanel.components.utility.strings.Strings_CleanPageSlug_TASK( page, 'file' ) & '_' & 'RETRIEVE';
 
         //lists
         var invalidPanelRoutes  = this.invalidPanelRoutes;
@@ -34,12 +34,12 @@
 
         try{
 		
-		   //writeDump( local ) writeDump( urlData ) writeDump( this ) writeDump( formData );
+		    //writeDump( local ) writeDump( urlData ) writeDump( this ) writeDump( formData ) abort;
 
             if( structIsEmpty( formData ) && !ajax && !chromeless ){
 
                 if( debug ){
-                    writeOutput( 'path 1' );
+                    writeOutput( 'path 1' ) abort;
                 }
 
                 writeOutput(
@@ -49,7 +49,7 @@
             } else if( !structIsEmpty( formData ) && !ajax && !chromeless ) {
 
                 if( debug ){
-                    writeOutput( 'path 2' );
+                    writeOutput( 'path 2' ); abort;
                 }
 
                 for( key in 'route,dir,page' ){
@@ -140,49 +140,53 @@
 
                 //generate a htmlBlob
                 saveContent variable='htmlBlob'{
-                    invoke( application[ 'errorPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ route ], retrieveInvoke, { urlData = urlData } );
+                    invoke( APPLICATION[ 'adminPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ route ], retrieveInvoke, { urlData = urlData } );
                 }
 
                 if( insideAdminPanel ){ //admin panel
 
-                    writeOutput( 'insideAdminPanel' ); abort;
 
                     //Do security rights for page here
                     if( isNumeric( request.siteSelected ) && request.siteSelected ){
 
-                        application[ 'errorPanel' ][ 'components' ][ 'utility' ][ 'htmlElements' ].HTMLELEMENTS_startDocumentFragment_RENDER();
-                        application[ 'errorPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ 'chrome' ].Chrome_Header_RETRIEVE( urlData );
-                        application[ 'errorPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ 'chrome' ].Chrome_Body_RETRIEVE( urlData, htmlBlob, dir, route, page );
-                        application[ 'errorPanel' ][ 'components' ][ 'utility' ][ 'htmlElements' ].HTMLELEMENTS_endDocumentFragment_RENDER();
+                        APPLICATION[ 'adminPanel' ][ 'components' ][ 'utility' ][ 'htmlElements' ].HTMLELEMENTS_startDocumentFragment_RENDER();
+                        APPLICATION[ 'adminPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ 'chrome' ].Chrome_Header_RETRIEVE( urlData );
+                        APPLICATION[ 'adminPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ 'chrome' ].Chrome_Body_RETRIEVE( urlData, htmlBlob, dir, route, page );
+                        APPLICATION[ 'adminPanel' ][ 'components' ][ 'utility' ][ 'htmlElements' ].HTMLELEMENTS_endDocumentFragment_RENDER();
 
                     } else {
 
                         if( route != 'dashboard' && page != 'dashboard' ){
 
-                            location( url=application.errorPanel.components.utility.strings.Strings_GeneratePageHref_TASK( 'dashboard' ), addToken=false );
+                            location( url=application.adminPanel.components.utility.strings.Strings_GeneratePageHref_TASK( 'dashboard' ), addToken=false );
 
                         } else {
-
-                            writeOutput( 'not inside control panel' ); abort;
-
                         
-                            application[ 'errorPanel' ][ 'components' ][ 'utility' ][ 'htmlElements' ].HTMLELEMENTS_startDocumentFragment_RENDER();
-                            application[ 'errorPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ 'chrome' ].Chrome_Header_RETRIEVE( urlData );
-                            application[ 'errorPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ 'chrome' ].Chrome_Body_RETRIEVE( urlData, htmlBlob, dir, route, page );
-                            application[ 'errorPanel' ][ 'components' ][ 'utility' ][ 'htmlElements' ].HTMLELEMENTS_endDocumentFragment_RENDER();
+                            APPLICATION[ 'adminPanel' ][ 'components' ][ 'utility' ][ 'htmlElements' ].HTMLELEMENTS_startDocumentFragment_RENDER();
+                            APPLICATION[ 'adminPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ 'chrome' ].Chrome_Header_RETRIEVE( urlData );
+                            APPLICATION[ 'adminPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ 'chrome' ].Chrome_Body_RETRIEVE( urlData, htmlBlob, dir, route, page );
+                            APPLICATION[ 'adminPanel' ][ 'components' ][ 'utility' ][ 'htmlElements' ].HTMLELEMENTS_endDocumentFragment_RENDER();
 
                         }
 
                     }
 
-                } else {
+                } else if( arrayFind( this.directories, dir ) && arrayFind( this.routes, route ) && listFind( invalidPanelRoutes, route ) ) { //login page
 
-                    //writeOutput( "not inside or we don''t have a panel build" ); abort;
+                
+                    APPLICATION[ 'adminPanel' ][ 'components' ][ 'utility' ][ 'htmlElements' ].HTMLELEMENTS_startDocumentFragment_RENDER();
+                    APPLICATION[ 'adminPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ 'chrome' ].Chrome_Header_RETRIEVE( urlData );
+                    APPLICATION[ 'adminPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ 'login' ].Login_Body_RETRIEVE( urlData, htmlBlob, dir, route, page );
+                    APPLICATION[ 'adminPanel' ][ 'components' ][ 'utility' ][ 'htmlElements' ].HTMLELEMENTS_endDocumentFragment_RENDER();
+                
 
-                    application[ 'errorPanel' ][ 'components' ][ 'utility' ][ 'htmlElements' ].HTMLELEMENTS_startDocumentFragment_RENDER();
-                    application[ 'errorPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ 'chrome' ].Chrome_Header_RETRIEVE( urlData );
-                    application[ 'errorPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ 'chrome' ].Chrome_Body_RETRIEVE( urlData, htmlBlob, dir, route, page );
-                    application[ 'errorPanel' ][ 'components' ][ 'utility' ][ 'htmlElements' ].HTMLELEMENTS_endDocumentFragment_RENDER();
+                } else { //renders login page on session timeout
+
+                    APPLICATION[ 'adminPanel' ][ 'components' ][ 'utility' ][ 'htmlElements' ].HTMLELEMENTS_startDocumentFragment_RENDER();
+                    APPLICATION[ 'adminPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ 'chrome' ].Chrome_Header_RETRIEVE( urlData );
+                    APPLICATION[ 'adminPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ 'login' ].Login_Body_RETRIEVE( urlData, '', dir, route, page );
+                    APPLICATION[ 'adminPanel' ][ 'components' ][ 'utility' ][ 'htmlElements' ].HTMLELEMENTS_endDocumentFragment_RENDER();
+
                 }
 
             } else {
@@ -191,35 +195,27 @@
 
                 if( insideAdminPanel ){
 
- 
-
-                    writeOutput( '400 inside control panel' ); abort;
-
-                        //generate a htmlBlob
+                    //generate a htmlBlob
                     saveContent variable='htmlBlob'{
-                        invoke( application[ 'errorPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ route ], retrieveInvoke, { urlData = urlData } );
+                        invoke( APPLICATION[ 'adminPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ route ], retrieveInvoke, { urlData = urlData } );
                     }
 
-
-                    application[ 'errorPanel' ][ 'components' ][ 'utility' ][ 'htmlElements' ].HTMLELEMENTS_startDocumentFragment_RENDER();
-                    application[ 'errorPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ 'chrome' ].Chrome_Header_RETRIEVE( urlData );
-                    application[ 'errorPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ 'chrome' ].Chrome_Body_RETRIEVE( urlData, htmlBlob, route, page );
-                    application[ 'errorPanel' ][ 'components' ][ 'utility' ][ 'htmlElements' ].HTMLELEMENTS_endDocumentFragment_RENDER();
+                    APPLICATION[ 'adminPanel' ][ 'components' ][ 'utility' ][ 'htmlElements' ].HTMLELEMENTS_startDocumentFragment_RENDER();
+                    APPLICATION[ 'adminPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ 'chrome' ].Chrome_Header_RETRIEVE( urlData );
+                    APPLICATION[ 'adminPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ 'chrome' ].Chrome_Body_RETRIEVE( urlData, htmlBlob, route, page );
+                    APPLICATION[ 'adminPanel' ][ 'components' ][ 'utility' ][ 'htmlElements' ].HTMLELEMENTS_endDocumentFragment_RENDER();
 
                 } else {
 
-                    writeOutput( '400 not inside control panel' ); abort;
-
                     //generate a htmlBlob
                     saveContent variable='htmlBlob'{
-                        invoke( application[ 'errorPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ route ], retrieveInvoke, { urlData = urlData } );
+                        invoke( APPLICATION[ 'adminPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ route ], retrieveInvoke, { urlData = urlData } );
                     }
 
-
-                    application[ 'errorPanel' ][ 'components' ][ 'utility' ][ 'htmlElements' ].HTMLELEMENTS_startDocumentFragment_RENDER();
-                    application[ 'errorPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ 'chrome' ].Chrome_Header_RETRIEVE( urlData );
-                    application[ 'errorPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ 'chrome' ].Chrome_Body_RETRIEVE( urlData, htmlBlob, route, page );
-                    application[ 'errorPanel' ][ 'components' ][ 'utility' ][ 'htmlElements' ].HTMLELEMENTS_endDocumentFragment_RENDER(); 
+                    APPLICATION[ 'adminPanel' ][ 'components' ][ 'utility' ][ 'htmlElements' ].HTMLELEMENTS_startDocumentFragment_RENDER();
+                    APPLICATION[ 'adminPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ 'chrome' ].Chrome_Header_RETRIEVE( urlData );
+                    APPLICATION[ 'adminPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ 'login' ].Login_Body_RETRIEVE( urlData, htmlBlob );
+                    APPLICATION[ 'adminPanel' ][ 'components' ][ 'utility' ][ 'htmlElements' ].HTMLELEMENTS_endDocumentFragment_RENDER(); 
 
                 }
 
@@ -246,10 +242,10 @@
             if( arrayFind( this.directories, dir ) && arrayFind( this.routes, route ) ){
 
                 if( debug && 0 ){
-                    writeDump( application.errorPanel.components.site.controllers[ route ] ) writeDump( processInvoke ) writeDump( formData ) abort;
+                    writeDump( application.adminPanel.components.site.controllers[ route ] ) writeDump( processInvoke ) writeDump( formData ) abort;
                 }
 
-                invoke( application.errorPanel.components.site.controllers[ route ], processInvoke, { formData=formData, debug=debug } );
+                invoke( application.adminPanel.components.site.controllers[ route ], processInvoke, { formData=formData, debug=debug } );
 
             }
 
@@ -280,7 +276,7 @@
 
                 //generate a htmlBlob
                 saveContent variable='htmlBlob'{
-                    invoke( application[ 'errorPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ route ], retrieveInvoke, { urlData = urlData } );
+                    invoke( APPLICATION[ 'adminPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ route ], retrieveInvoke, { urlData = urlData } );
                 }
 
                 if( insideAdminPanel ){ //admin panel
@@ -294,7 +290,7 @@
 
                         if( route != 'dashboard' && page != 'dashboard' ){
 
-                            location( url=application.errorPanel.components.utility.strings.Strings_GeneratePageHref_TASK( 'dashboard' ), addToken=false );
+                            location( url=application.adminPanel.components.utility.strings.Strings_GeneratePageHref_TASK( 'dashboard' ), addToken=false );
 
                         } else {
                         
@@ -304,7 +300,17 @@
 
                     }
 
-                } 
+                } else if( arrayFind( this.directories, dir ) && arrayFind( this.routes, route ) && listFind( invalidPanelRoutes, route ) ) { //login page
+
+                
+                    writeOutput( htmlBlob );
+                
+
+                } else { //renders login page on session timeout
+
+                    writeOutput( htmlBlob );
+
+                }
 
             } else {
 
@@ -314,7 +320,7 @@
 
                     //generate a htmlBlob
                     saveContent variable='htmlBlob'{
-                        invoke( application[ 'errorPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ route ], retrieveInvoke, { urlData = urlData } );
+                        invoke( APPLICATION[ 'adminPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ route ], retrieveInvoke, { urlData = urlData } );
                     }
 
                     writeOutput( htmlBlob );
@@ -323,7 +329,7 @@
 
                     //generate a htmlBlob
                     saveContent variable='htmlBlob'{
-                        invoke( application[ 'errorPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ route ], retrieveInvoke, { urlData = urlData } );
+                        invoke( APPLICATION[ 'adminPanel' ][ 'components' ][ 'site' ][ 'controllers' ][ route ], retrieveInvoke, { urlData = urlData } );
                     }
 
                     writeOutput( htmlBlob );

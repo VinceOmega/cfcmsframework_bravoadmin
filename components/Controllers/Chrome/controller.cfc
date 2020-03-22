@@ -19,7 +19,7 @@ component displayName="ChromeController" output=true hint="" {
 
             try{
 
-                application[ 'errorPanel' ][ 'components' ][ 'site' ][ 'views' ][ 'chrome' ].Chrome_Header_VIEW( urlData );
+                APPLICATION[ 'adminPanel' ][ 'components' ][ 'site' ][ 'views' ][ 'chrome' ].Chrome_Header_VIEW( urlData );
 
             } catch( any e ){
 
@@ -60,11 +60,11 @@ component displayName="ChromeController" output=true hint="" {
 
                 }
 
-                resultStruct[ 'productsPublished' ] =  application[ 'errorPanel' ][ 'components' ][ 'site' ][ 'models' ][ 'chrome' ].Chrome_ProductsPublished_READ();
+                resultStruct[ 'productsPublished' ] =  APPLICATION[ 'adminPanel' ][ 'components' ][ 'site' ][ 'models' ][ 'chrome' ].Chrome_ProductsPublished_READ();
 
-                resultStruct[ 'exchangeRate' ]      = application[ 'errorPanel' ][ 'components' ][ 'site' ][ 'models' ][ 'chrome' ].Chrome_ExchangeRate_READ();
+                resultStruct[ 'exchangeRate' ]      = APPLICATION[ 'adminPanel' ][ 'components' ][ 'site' ][ 'models' ][ 'chrome' ].Chrome_ExchangeRate_READ();
 
-                application[ 'errorPanel' ][ 'components' ][ 'site' ][ 'views' ][ 'chrome' ].Chrome_Body_VIEW( urlData, htmlBlob, { title: '' }, debugCollection, application.errorPanel.metaData.navigation, resultStruct, '' );
+                APPLICATION[ 'adminPanel' ][ 'components' ][ 'site' ][ 'views' ][ 'chrome' ].Chrome_Body_VIEW( urlData, htmlBlob, { title: '' }, debugCollection, application.adminPanel.metaData.navigation, resultStruct, '' );
             
             } catch( any e ){
 

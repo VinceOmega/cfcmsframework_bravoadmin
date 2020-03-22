@@ -64,9 +64,9 @@
                     <cfoutput>
 
                         <!-- Favicon icon -->
-                        <link rel="icon" type="image/png" sizes="16x16" href="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#images/favicon.png">
+                        <link rel="icon" type="image/png" sizes="16x16" href="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#images/favicon.png">
 
-                        <title>Bravo Admin | #application.errorPanel.metaData.pages[ urlData[ 'page' ] ].seoTitle?: 'No Title For This Page'#</title>
+                        <title>Bravo Admin | #application.adminPanel.metaData.pages[ urlData[ 'page' ] ].seoTitle?: 'No Title For This Page'#</title>
 
                         <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap" rel="stylesheet">
 
@@ -74,39 +74,39 @@
                         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet">
 
                         <!--- Bootstrap Reset CSS --->
-                        <link href="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/bootstrap/css/bootstrap-reboot.min.css" rel="stylesheet">
+                        <link href="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/bootstrap/css/bootstrap-reboot.min.css" rel="stylesheet">
 
                         <!--- Bootstrap Core CSS --->
-                        <link href="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+                        <link href="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
                         <!--- Bootstrap Grid CSS --->
-                        <link href="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/bootstrap/css/bootstrap-grid.min.css" rel="stylesheet">
+                        <link href="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/bootstrap/css/bootstrap-grid.min.css" rel="stylesheet">
 
                         <!--- Bootstrap Toggle --->
                         <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 
                         <!--- Bootstrap Select CSS --->
-                        <link href="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+                        <link href="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
 
                         <!--- Dropify CSS --->
                         <link href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css" rel="stylesheet">
 
                         <!--- Seeet Alert CSS --->
-                        <link href="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/sweetalert/sweetalert.css" rel="stylesheet">
+                        <link href="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/sweetalert/sweetalert.css" rel="stylesheet">
                         <!--- Toastr CSS --->
                         <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
 
                         <!--- Chartist CSS --->
-                        <link href="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#chartist-js/dist/chartist.min.css" rel="stylesheet">
-                        <link href="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#chartist-js/dist/chartist.init.css" rel="stylesheet">
-                        <link href="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
-                        <link href="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#css-chart/css-chart.css" rel="stylesheet">
+                        <link href="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#chartist-js/dist/chartist.min.css" rel="stylesheet">
+                        <link href="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#chartist-js/dist/chartist.init.css" rel="stylesheet">
+                        <link href="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+                        <link href="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#css-chart/css-chart.css" rel="stylesheet">
 
                         <!-- Custom CSS -->
-                        <link href="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'CSS' ]#style.css" rel="stylesheet">
+                        <link href="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'CSS' ]#style.css" rel="stylesheet">
                         
                         <!-- You can change the theme colors from here -->
-                        <link href="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'CSS' ]#colors/gray.css" id="theme" rel="stylesheet">
+                        <link href="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'CSS' ]#colors/gray.css" id="theme" rel="stylesheet">
 
                         <!--- Custom styles added --->
                         <link href="/style/css/custom.css" rel="stylesheet">
@@ -121,12 +121,12 @@
                     <cfoutput>
 
                         <!-- Include JQuery -->
-                        <script src="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/jquery/jquery.min.js"></script>
+                        <script src="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/jquery/jquery.min.js"></script>
 
                         <!--- Include Data Tables --->
                         <!---
-                            <script src="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
-                            <script src="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/datatables.net-bs4/js/dataTables.responsive.min.js"></script>
+                            <script src="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+                            <script src="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/datatables.net-bs4/js/dataTables.responsive.min.js"></script>
                         --->
 
                         <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
@@ -181,7 +181,7 @@
 
                         <body class="fix-header fix-sidebar card-no-border">
 
-                            <!--- <cfset variables.Chrome_Body_VIEW___Preloader( urlData )> --->
+                            <cfset variables.Chrome_Body_VIEW___Preloader( urlData )>
 
                             <cfset variables.Chrome_Body_VIEW___ContentContainer( urlData, htmlBlob, breadCrumbData, debugCollection, navigationData, resultStruct, partialBlob )>
 
@@ -234,22 +234,22 @@
                         <cfset var htmlBlobSidebar = ''>
 
                         <div id="main-wrapper">
-                                                           
+
                             <cfset variables.Chrome_Body_VIEW___ContentContainer___TopBarContainer( urlData, debugCollection )>
 
-                            <!--- <cfset variables.Chrome_Body_VIEW___ContentContainer___SideBarContainer( urlData, navigationData )> --->
+                            <cfset variables.Chrome_Body_VIEW___ContentContainer___SideBarContainer( urlData, navigationData )>
 
                             <div class="page-wrapper">
 
                                 <div class="container-fluid">
 
-                                    <!--- <cfset variables.Chrome_Body_VIEW___ContentContainer___BreadcrumbGenerator( urlData, breadCrumbData, resultStruct )> --->
+                                    <cfset variables.Chrome_Body_VIEW___ContentContainer___BreadcrumbGenerator( urlData, breadCrumbData, resultStruct )>
 
-                                    <!--- <cfset variables.Chrome_Body_VIEW___ContentContainer___MessageNotification( urlData )> --->
+                                    <cfset variables.Chrome_Body_VIEW___ContentContainer___MessageNotification( urlData )>
 
                                     <cfset variables.Chrome_Body_VIEW___ContentContainer___DisplayPage( urlData, htmlBlob )>
 
-                                    <!--- <cfset variables.Chrome_Body_VIEW___ContentContainer___FooterContainer( urlData )> --->
+                                    <cfset variables.Chrome_Body_VIEW___ContentContainer___FooterContainer( urlData )>
 
                                 </div>
 
@@ -320,7 +320,7 @@
 
                                                 <!--- <cfdump var="#links#"> --->
 
-                                                <!--- <a href="#application[ 'errorPanel' ][ 'metaData' ][ 'pages' ][ urlData[ 'page' ] ]##debugCollection[ 'sectionLinks' ][ links ]#">#debugCollection[ 'sectionArgs' ][ links ]#</a> --->
+                                                <!--- <a href="#application[ 'adminPanel' ][ 'metaData' ][ 'pages' ][ urlData[ 'page' ] ]##debugCollection[ 'sectionLinks' ][ links ]#">#debugCollection[ 'sectionArgs' ][ links ]#</a> --->
 
                                             </cfloop>
                                             <hr>
@@ -346,12 +346,12 @@
 
                             <div class="navbar-header">
 
-                                <a class="navbar-brand" href="#application.errorPanel.components.utility.strings.Strings_GeneratePageHref_TASK( 'dashboard' )#">
+                                <a class="navbar-brand" href="#application.adminPanel.components.utility.strings.Strings_GeneratePageHref_TASK( 'dashboard' )#">
                                     <!-- Admin Panel - Bravo Logo -->
                                     <div class="">
                                         
                                         <div class="">
-                                            <img src="#application[ 'errorPanel' ][ 'logo' ]#" alt="Bravo Admin Panel Logo" class="navbar-brand__logo">
+                                            <img src="#APPLICATION[ 'adminPanel' ][ 'logo' ]#" alt="Bravo Admin Panel Logo" class="navbar-brand__logo">
                                         </div>
                                         
                                         <!---
@@ -380,7 +380,7 @@
 
                                 <cfset variables.Chrome_Body_VIEW___ContentContainer___TopBarContainer___LeftSection___Toggle( urlData )>
 
-                                <!--- <cfset variables.Chrome_Body_VIEW___ContentContainer___TopBarContainer___LeftSection___SiteSelector( urlData )> --->
+                                <cfset variables.Chrome_Body_VIEW___ContentContainer___TopBarContainer___LeftSection___SiteSelector( urlData )>
 
                                 <!---
                                     <cfset variables.Chrome_Body_VIEW___ContentContainer___TopBarContainer___LeftSection___Search( urlData )>
@@ -702,7 +702,7 @@
                                 
                                     <cfset variables.Chrome_Body_VIEW___ContentContainer___TopBarContainer___RightSection___Support( urlData )>
 
-                                    <!--- <cfset variables.Chrome_Body_VIEW___ContentContainer___TopBarContainer___RightSection___EditUserLink( urlData )> --->
+                                    <cfset variables.Chrome_Body_VIEW___ContentContainer___TopBarContainer___RightSection___EditUserLink( urlData )>
 
                                 </ul>
 
@@ -775,7 +775,7 @@
 
                                     </cfif>
 
-                                    <a href="#application.errorPanel.metaData.pages[ 'signout' ].href#" class="dropdown-item" data-toggle="tooltip" title="This will log you out of the application">
+                                    <a href="#application.adminPanel.metaData.pages[ 'signout' ].href#" class="dropdown-item" data-toggle="tooltip" title="This will log you out of the application">
                                         Log out
                                     </a>
                                 </div>
@@ -1379,36 +1379,36 @@
                         <cfoutput>
                             
                             <!-- Bootstrap tether Core JavaScript -->
-                            <script src="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/popper/popper.min.js"></script>
-                            <script src="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/bootstrap/js/bootstrap.min.js"></script>
+                            <script src="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/popper/popper.min.js"></script>
+                            <script src="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/bootstrap/js/bootstrap.min.js"></script>
                             <!-- slimscrollbar scrollbar JavaScript -->
-                            <script src="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'JS' ]#jquery.slimscroll.js"></script>
+                            <script src="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'JS' ]#jquery.slimscroll.js"></script>
                             <!--Wave Effects -->
-                            <script src="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'JS' ]#waves.js"></script>
+                            <script src="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'JS' ]#waves.js"></script>
                             <!--Menu sidebar -->
-                            <script src="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'JS' ]#sidebarmenu.js"></script>
+                            <script src="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'JS' ]#sidebarmenu.js"></script>
                             <!--stickey kit -->
-                            <script src="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
-                            <script src="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/sparkline/jquery.sparkline.min.js"></script>
+                            <script src="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+                            <script src="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/sparkline/jquery.sparkline.min.js"></script>
                             <!--- sweet alert system --->
-                            <script src="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/sweetalert/sweetalert.min.js"></script>
+                            <script src="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/sweetalert/sweetalert.min.js"></script>
                             <!--- bootstrap toggle --->
                             <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
                             <!--- bootstrap dropdown --->
-                            <script src="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/bootstrap-select/bootstrap-select.min.js"></script>
+                            <script src="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/bootstrap-select/bootstrap-select.min.js"></script>
                             <!--- Dropify --->
-                            <script src="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/dropify/dist/js/dropify.min.js"></script>
+                            <script src="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/dropify/dist/js/dropify.min.js"></script>
 
                             <!--- toastr --->
                             <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-                            <script src="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/toast-master/js/jquery.toast.js"></script>
+                            <script src="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/toast-master/js/jquery.toast.js"></script>
 
                             <!--- sparkline --->
-                            <script src="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/sparkline/jquery.charts-sparkline.js"></script>
-                            <script src="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/sparkline/jquery.sparkline.min.js"></script>
+                            <script src="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/sparkline/jquery.charts-sparkline.js"></script>
+                            <script src="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'Assets' ]#plugins/sparkline/jquery.sparkline.min.js"></script>
 
                             <!--Custom JavaScript -->
-                            <script src="#application[ 'errorPanel' ][ 'Theme' ][ 'Material' ][ 'JS' ]#custom.min.js"></script>
+                            <script src="#APPLICATION[ 'adminPanel' ][ 'Theme' ][ 'Material' ][ 'JS' ]#custom.min.js"></script>
 
 
                             <script src="/js/script.js"></script>
