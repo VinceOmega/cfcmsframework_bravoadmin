@@ -1,0 +1,4 @@
+node_modules
+.vscode
+/serverID.cfm
+/.vscode/settings.json

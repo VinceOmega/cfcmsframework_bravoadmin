@@ -1,0 +1,35 @@
+# Helicon Ape version 3.1.0.256
+
+RewriteEngine on 
+RewriteBase /
+
+AllowOverride all
+
+
+#pass through for all existing real files and real directories
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule .?	- [NS,L]
+
+RewriteCond %{REQUEST_FILENAME} .*\.map$
+RewriteCond %{REQUEST_FILENAME} .*\.min.*$
+RewriteRule .?  - [NS,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#The line below represents the url scheme used for the admin panel. Directory, route and page.
+RewriteRule ^(.*)\/(.*)\/(.*)/(.*)$   	    .\/index.cfm?dir=$1&route=$2&page=$3&tab=$4 [QSA,NC,L] 
+
+#If at root, redirect to login page
+RewriteCond %{REQUEST_URI} ^\/$
+RewriteRule .* 						    .\/index.cfm?dir=dashboard&route=dashboard&page=reports&tab=error_listing [QSA, NC, L]
+
+#anything else not at root but doesn't have a predefined three slug url form in the application
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule  (.*) 						./index.cfm					[QSA,NC,L]
+
+
+
+
+

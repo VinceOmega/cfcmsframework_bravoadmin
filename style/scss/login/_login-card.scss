@@ -1,0 +1,42 @@
+.login-box {
+    &__logo {
+        object-fit: contain;
+        width: 100%;
+    }
+    &__logo-subtext {
+        font-family: 'Quicksand', sans-serif;
+    }
+    &--reverse {
+        left: 0;
+        right: auto !important;
+    }
+}
+
+.card-fill-screen {
+    width: auto;
+    height: 100%;
+    z-index: 100;
+}
+
+.logout-message-container {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+    &__inner-container__wrapper {
+        &__buttons-fieldset {
+            display: block;
+            text-align: center;
+            * {
+                display: inline;
+            }
+            .btn-primary {
+                transition: all .2s ease-in;
+                &:hover {
+                    transition: all .2s ease-in;
+                    background-color: #007bff;
+                }
+            }
+        }
+    }
+}

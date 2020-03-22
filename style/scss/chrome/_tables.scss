@@ -1,0 +1,62 @@
+
+.dataTables_wrapper{
+
+    table{
+
+        &.dataTable{
+
+            font-size: 15px;
+
+        }
+
+        td{
+
+
+            &.dataTable{
+
+                &___lastLogin, &___phoneType1{
+
+                    font-family: 'Barlow', sans-serif;
+
+                }
+
+            }
+
+        }
+
+    }
+
+
+
+    div{
+
+        &.dataTables_paginate{
+
+            a{
+
+                &.paginate_button{
+
+                    &.current{
+
+                        background: $light;
+                        color: $dark;
+                        transition: all .4s ease-in-out;
+
+                        &:hover{
+
+                            color: $dark;
+                            background: darken( $light, 20 );
+                            transition: all .4s ease-in-out;
+
+
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+}

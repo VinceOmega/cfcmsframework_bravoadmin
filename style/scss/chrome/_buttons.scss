@@ -1,0 +1,185 @@
+.btn-primary{
+
+    background: $light;
+    background-color: $light;
+    border: 1px solid lighten( $light, 20 );
+    transition: all .8s ease-in-out;
+    color: $dark;
+
+    &:hover{
+
+        background: lighten( $light, 20 );
+        background-color: lighten( $light, 20 );
+        border: 1px solid lighten( $light, 20 );
+        transition: all .8s ease-in-out;
+
+    }
+
+    &:active{
+
+        background: $light;
+        background-color: $light;
+        border: 1px solid lighten( $light, 20 );
+        transition: all .8s ease-in-out;
+    }
+
+    &:visited{
+
+        background: $light;
+        background-color: $light;
+        border: 1px solid lighten( $light, 20 );
+        transition: all .8s ease-in-out;
+
+    }
+
+    &:enabled{
+
+        background: $light;
+        background-color: $light;
+        border: 1px solid lighten( $light, 20 );
+        transition: all .8s ease-in-out;
+
+    }
+
+}
+
+.btn-topbar{
+
+    right: 2%;
+    position: absolute;
+    top: 30%;
+    font-size: 12px;
+
+    ul{
+
+        margin-right: 20px;
+
+        li{
+            display: inline-block;
+            margin-right: 10px;
+
+            a{
+                color: $dark-gray;
+                text-decoration: none;
+            }
+        }
+
+    }
+
+    &__items{
+
+        margin-right: 5px;
+
+        &__help-icon{
+
+            margin-right: 5px;
+            font-size: 15px;
+
+        }
+
+        &__text{
+
+            font-size: 18px;
+            font-weight: 200;
+
+        }
+
+        &__support-icon{
+
+            margin-right: 5px;
+            font-size: 15px;
+
+        }
+
+        .btn-secondary{
+
+            &:first-child{
+
+                margin-right: -5px;
+
+            }
+
+        }
+
+    }
+
+    button{
+
+        font-size: 15px;
+        border: 1px solid darken( $light, 20 );
+        &:hover, &:active{
+            border: 1px solid $light;
+        }
+
+    }
+
+    .dropdown-menu{
+
+        position: relative !important;
+        top: -2.9%;
+        font-size: 15px;
+        border: 1px solid darken( $light, 20 );
+        color: lighten( $dark, 10 );
+        &:hover, &:active{
+            border: 1px solid $light;
+            background-color: lighten( $light, 30 );
+        }
+
+    }
+
+}
+
+.btn-theme{
+
+    color: $dark;
+    background-color: $light;
+    border: 1px solid darken( $light, 20 );
+    transition: all .8s ease-in-out;
+    font-size: 12px;
+
+    &:hover, &:visited{
+
+        color: lighten( $dark, 30 );
+        background-color: lighten( $light, 30 );
+        box-shadow: 0px 15px 5px -3px rgba(0,0,0,0.55);
+        border: 1px solid $light;
+        transition: all .8s ease-in-out;
+
+    }
+
+    &:active{
+        color: darken( #00aae7, 5 );
+        background-color: lighten( $light, 10 );
+        box-shadow: none;
+        border: 1px solid ligten( $light, 10 );
+        transition: all .1s ease-out;
+    }
+
+    &-slider{
+
+        color: $dark;
+        background-color: $light;
+        border: 1px solid $light;
+        transition: all .8s ease-in-out;
+        font-size: 12px;
+
+        &:hover, &:visited{
+
+            color: lighten( $dark, 30 );
+            background-color: lighten( $light, 30 );
+            border: 1px solid $light;
+            transition: all .8s ease-in-out;
+    
+        }
+    
+        &:active{
+            color: darken( $yellow, 5 );
+            background-color: lighten( $light, 10 );
+            box-shadow: none;
+            border: 1px solid ligten( $light, 10 );
+            transition: all .1s ease-out;
+        }
+
+    }
+
+}

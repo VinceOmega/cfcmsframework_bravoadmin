@@ -1,0 +1,61 @@
+.navbar-collapse {
+    box-shadow: 5px 0 10px rgba(0, 0, 0, .5);
+}
+
+.products-meter {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    margin-top: 2px;
+    &__image {
+        background-image: url('/img/common/products_meter.png');
+        width: inherit;
+        height: inherit;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+.page-titles{
+
+    padding-bottom: 0;
+
+    .page-info {
+        bottom: 8px;
+        margin-left: -10px;
+    }
+
+}
+
+.exchange-rate {
+    width: 40px;
+    height: 40px;
+    &__usd {
+        width: inherit;
+        height: inherit;
+        font-size: 40px;
+        line-height: .8;
+        transition: color .2s ease-in-out;
+        &:hover {
+            color: #005c00;
+            transition: color .2s ease-in-out;
+        }
+    }
+}
+
+.conversion-rate {
+    font-size: 15px;
+}
+
+ol{
+
+    &.breadcrumb{
+
+        li{
+            a{
+                color: $dark;
+            }
+        }
+        
+    }
+}

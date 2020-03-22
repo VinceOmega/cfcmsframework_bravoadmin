@@ -1,0 +1,80 @@
+@keyframes spin {
+                
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(720deg);
+    }
+
+}
+
+.topbar {
+
+    nav {
+
+        .navbar-header{
+            perspective: 800px;
+        }
+
+        .navbar-collapse {
+
+            .navbar-nav {
+
+                &:first-of-type{
+                    margin-left: 8px;
+                    width: stretch;
+                    text-align: center;
+                }
+
+                .nav-item{
+
+                    &:nth-of-type( 3 ){
+
+                        width: stretch;
+
+                    }
+
+                }
+
+            }
+        }
+
+        .user-profile{
+
+            margin-right: 20%;
+
+        }
+
+    }
+    
+    width: 100% !important;
+
+    .dropdown-item{
+        
+        color: darken( $light, 20 );
+
+        &:hover, &:active{
+
+            color: lighten( $light, 20 );
+            background: lighten( $dark, 30 );
+
+        }
+        
+    }
+
+    a{
+        i{
+            &.mdi{
+
+                &-power{
+                    font-size: 22px;
+                    position: relative;
+                    bottom: 4px;
+                }
+            }
+        }
+    }
+
+}

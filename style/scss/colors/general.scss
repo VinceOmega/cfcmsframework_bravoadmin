@@ -1,0 +1,426 @@
+$green: #0F0;
+
+.green{
+
+    color: $green;
+
+    &-lighter{
+
+        &-10{
+            
+            color: lighten( $green, 10 );
+
+        }
+
+        &-20{
+
+            color: lighten( $green, 20 );
+
+        }
+
+        &-30{
+
+            color: lighten( $green, 30 );
+
+        }
+
+        &-40{
+
+            color: lighten( $green, 40 );
+
+        }
+
+        &-50{
+
+            color: lighten( $green, 50 );
+
+        }
+
+        &-60{
+
+            color: lighten( $green, 60 );
+
+        }
+
+        &-70{
+
+            color: lighten( $green, 70 );
+
+        }
+
+        &-80{
+
+            color: lighten( $green, 80 );
+
+        }
+
+        &-90{
+
+            color: lighten( $green, 90 );
+
+        }
+
+        &-100{
+
+            color: lighten( $green, 100 );
+
+        }
+
+    }
+
+    &-darker{
+
+        &-10{
+
+            color: darken( $green, 10 );
+
+        }
+
+        &-20{
+
+            color: darken( $green, 20 );
+
+
+        }
+
+        &-30{
+
+            color: darken( $green, 30 );
+
+        }
+
+        &-40{
+
+            color: darken( $green, 40 );
+
+        }
+
+        &-50{
+
+            color: darken( $green, 50 );
+
+
+        }
+
+        &-60{
+
+            color: darken( $green, 60 );
+
+
+        }
+
+        &-70{
+
+            color: darken( $green, 70 );
+
+
+        }
+
+        &-80{
+
+            color: darken( $green, 80 );
+
+
+        }
+
+        &-90{
+
+            color: darken( $green, 90 );
+
+
+        }
+
+        &-100{
+
+            color: darken( $green, 100 );
+            
+        }
+
+    }
+
+}
+
+
+$red: #f00;
+
+.red{
+
+    color: $red;
+
+    &-lighter{
+
+        &-10{
+            
+            color: lighten( $red, 10 );
+
+        }
+
+        &-20{
+
+            color: lighten( $red, 20 );
+
+        }
+
+        &-30{
+
+            color: lighten( $red, 30 );
+
+        }
+
+        &-40{
+
+            color: lighten( $red, 40 );
+
+        }
+
+        &-50{
+
+            color: lighten( $red, 50 );
+
+        }
+
+        &-60{
+
+            color: lighten( $red, 60 );
+
+        }
+
+        &-70{
+
+            color: lighten( $red, 70 );
+
+        }
+
+        &-80{
+
+            color: lighten( $red, 80 );
+
+        }
+
+        &-90{
+
+            color: lighten( $red, 90 );
+
+        }
+
+        &-100{
+
+            color: lighten( $red, 100 );
+
+        }
+
+    }
+
+    &-darker{
+
+        &-10{
+
+            color: darken( $red, 10 );
+
+        }
+
+        &-20{
+
+            color: darken( $red, 20 );
+
+
+        }
+
+        &-30{
+
+            color: darken( $red, 30 );
+
+        }
+
+        &-40{
+
+            color: darken( $red, 40 );
+
+        }
+
+        &-50{
+
+            color: darken( $red, 50 );
+
+
+        }
+
+        &-60{
+
+            color: darken( $red, 60 );
+
+
+        }
+
+        &-70{
+
+            color: darken( $red, 70 );
+
+
+        }
+
+        &-80{
+
+            color: darken( $red, 80 );
+
+
+        }
+
+        &-90{
+
+            color: darken( $red, 90 );
+
+
+        }
+
+        &-100{
+
+            color: darken( $red, 100 );
+            
+        }
+
+    }
+
+}
+
+$yellow: #ccff00;
+
+.yellow{
+    
+    color: $yellow;
+
+    &-lighter{
+
+        &-10{
+            
+            color: lighten( $yellow, 10 );
+
+        }
+
+        &-20{
+
+            color: lighten( $yellow, 20 );
+
+        }
+
+        &-30{
+
+            color: lighten( $yellow, 30 );
+
+        }
+
+        &-40{
+
+            color: lighten( $yellow, 40 );
+
+        }
+
+        &-50{
+
+            color: lighten( $yellow, 50 );
+
+        }
+
+        &-60{
+
+            color: lighten( $yellow, 60 );
+
+        }
+
+        &-70{
+
+            color: lighten( $yellow, 70 );
+
+        }
+
+        &-80{
+
+            color: lighten( $yellow, 80 );
+
+        }
+
+        &-90{
+
+            color: lighten( $yellow, 90 );
+
+        }
+
+        &-100{
+
+            color: lighten( $yellow, 100 );
+
+        }
+
+    }
+
+    &-darker{
+
+        &-10{
+
+            color: darken( $yellow, 10 );
+
+        }
+
+        &-20{
+
+            color: darken( $yellow, 20 );
+
+
+        }
+
+        &-30{
+
+            color: darken( $yellow, 30 );
+
+        }
+
+        &-40{
+
+            color: darken( $yellow, 40 );
+
+        }
+
+        &-50{
+
+            color: darken( $yellow, 50 );
+
+
+        }
+
+        &-60{
+
+            color: darken( $yellow, 60 );
+
+
+        }
+
+        &-70{
+
+            color: darken( $yellow, 70 );
+
+
+        }
+
+        &-80{
+
+            color: darken( $yellow, 80 );
+
+
+        }
+
+        &-90{
+
+            color: darken( $yellow, 90 );
+
+
+        }
+
+        &-100{
+
+            color: darken( $yellow, 100 );
+            
+        }
+
+    }
+
+}

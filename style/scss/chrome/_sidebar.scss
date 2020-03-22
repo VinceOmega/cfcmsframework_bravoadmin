@@ -1,0 +1,89 @@
+.sidebar-nav {
+    #sidebarnav {
+        li {
+            a {
+                &:hover {
+                    color: $dark;
+                    i {
+                        color: $dark;
+                    }
+                     ::after {
+                        color: $dark;
+                    }
+                }
+            }
+            &.active {
+                a {
+                    &:hover {
+                        color: $dark;
+                        i {
+                            color: $dark;
+                        }
+                         ::after {
+                            color: $dark;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.left-sidebar {
+    
+    box-shadow: 5px 0 10px rgba(0,0,0,.5);
+
+    .sidebar-footer{
+
+        background: $light;
+    
+        button{
+    
+            &.js-rsb-selectSites{
+    
+                transition: all .4s ease-in-out;
+                width:  stretch;
+    
+                &:hover {
+    
+                    transition: all .4s ease-in-out;
+    
+                    i{
+    
+                        animation: spin 2s linear infinite;
+                        transform: scale(2);
+                        cursor: pointer;
+    
+                    }
+    
+    
+                }
+    
+            }
+    
+        }
+    
+    }
+
+    .slimScrollDiv {
+
+        background: $light;
+
+        .scroll-sidebar {
+
+            .user-profile {
+                background-color: #fff !important;
+            }
+            .nav-devider {
+                background: rgba( 0, 0, 0, .1);
+            }
+            .btn-site-selection {
+                width: 100%;
+            }
+            .btn-no-radius {
+                border-radius: 0;
+            }
+        }
+    }
+}
+
